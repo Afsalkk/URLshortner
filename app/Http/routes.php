@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('urls');
 });
+
+Route::post('/url', [
+    'as' => 'post-url',
+    'uses' => 'UrlController@store'
+    ]);

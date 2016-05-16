@@ -5,7 +5,15 @@
     <head>
         <title>Url Shortner</title>
 
-        <!-- css and javascript -->
+        <!-- css -->
+
+        <!-- Bootstrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <!-- javascript --> 
+
+        <!-- bootstrap js -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>  
     <body>
         <div class="container">
@@ -14,6 +22,6 @@
             </nav>
         </div>
 
-        @yield ('content')
+        @yield('content')
     </body>
 </html>
