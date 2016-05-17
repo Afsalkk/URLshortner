@@ -74,7 +74,7 @@
                             url: "url",
                             data: { url : url, token : token },
                             method: "post",
-                            success: function (result) { alert(url)
+                            success: function (result) { 
                                 // body...
                                 if (result != 2) {
                                     $(".hash").html("<a href='"+url+"'>"+result+"</a>");

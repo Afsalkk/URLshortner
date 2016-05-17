@@ -13,13 +13,14 @@
 Route::group(['middleware' => ['web']], function () {
     // Put all your routes inside here.
 
-
-    Route::get('/', function () {
-    return view('urls');
+    Route::get('/', [
+        'as' => 'url',
+        'uses' => 'UrlController@index'
+        ]);
+    Route::post('/url', [
+        'as' => 'url',
+        'uses' => 'UrlController@store'
+        ]);
+    
 });
-
-Route::post('/url', [
-    'as' => 'url',
-    'uses' => 'UrlController@store'
-    ]);
-});
+ 
