@@ -10,7 +10,17 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::group(['middleware' => ['web']], function () {
+    // Put all your routes inside here.
 
-Route::get('/', function () {
-    return view('welcome');
+    Route::get('/', [
+        'as' => 'url',
+        'uses' => 'UrlController@index'
+        ]);
+    Route::post('/url', [
+        'as' => 'url',
+        'uses' => 'UrlController@store'
+        ]);
+    
 });
+ 
