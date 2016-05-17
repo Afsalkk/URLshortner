@@ -77,7 +77,7 @@
                             success: function (result) { 
                                 // body...
                                 if (result != 2) {
-                                    $(".hash").html("<a href='"+url+"'>"+result+"</a>");
+                                    $(".hash").html("<a href='http://"+url+"'>"+result+"</a>");
                                 } else {
                                     $(".alert-success").text("Please fill required fields.");
                                 }
