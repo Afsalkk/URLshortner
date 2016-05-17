@@ -2,6 +2,15 @@
 
 @extends('layouts.app') 
 
+@section('breadcrumb')
+<section class="content-header">
+    <h1>
+        Url Shortner
+        <small>Shorten your url's here</small>
+    </h1>  
+</section>
+@stop
+
 @section('content')
 
     <!-- Bootstrap boilerplate -->
@@ -46,7 +55,7 @@
     @section('js')
         <script type="text/javascript">
             $(document).ready(function () {
-                $("#btn-shorten").click(function (e) {alert('da')
+                $("#btn-shorten").click(function (e) { 
                     // body...
                     e.preventDefault();
                     var isValid;
@@ -59,16 +68,16 @@
                     }
                     if ( isValid == true ) {
                         var url = $("#url").val();
-                        var token = $('meta[name="csrf-token"]').attr('content');alert(token)
+                        var token = $('meta[name="csrf-token"]').attr('content'); 
                         $.ajax({
                             
                             url: "url",
                             data: { url : url, token : token },
                             method: "post",
-                            success: function (result) {alert(result)
+                            success: function (result) { alert(url)
                                 // body...
                                 if (result != 2) {
-                                    $(".hash").text("<a href='"+url+"'>result</a>");
+                                    $(".hash").html("<a href='"+url+"'>"+result+"</a>");
                                 } else {
                                     $(".alert-success").text("Please fill required fields.");
                                 }

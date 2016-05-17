@@ -16,15 +16,12 @@
        
     </head>  
     <body>
-        <div class="container">
-            <nav class="navbar navbar-default">
-                <!-- navbar contents -->
-            </nav>
-        </div>
+        
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
                 
+                @yield('breadcrumb')
                 <!-- Main content -->
                 <section class="content">
                     @if (Session('error'))
